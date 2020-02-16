@@ -11,3 +11,6 @@ u = (4/pi) * uN;
 plot(x,u)
 xlabel('x')
 ylabel('u(x)')
+hold 
+y=1;
+plot(x,y*ones(size(x)))
