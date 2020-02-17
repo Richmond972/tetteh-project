@@ -1,11 +1,11 @@
 %Program 6 from trefethen(Spectral Method in Matlab)
-% p6.m - variable coefficient wave equation
-% Grid, variable coefficient, and initial data:
+
+
 N = 128; h = 2*pi/N; x = h*(1:N); t = 0; dt = h/4;
-c = .2 + sin(x-1).^2;
-v = exp(-100*(x-1).^2); vold = exp(-100*(x-.2*dt-1).^2);
+c = 1;
+v = sin(2*x); vold = sin(2*x-.2*dt);
 % Time-stepping by leap frog formula:
-tmax = 8; tplot = .15; clf, drawnow
+tmax = 20; tplot = .15; clf, drawnow
 plotgap = round(tplot/dt); dt = tplot/plotgap;
 nplots = round(tmax/tplot);
 data = [v; zeros(nplots,N)]; tdata = t;
